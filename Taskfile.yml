@@ -1,0 +1,19 @@
+version: '3'
+
+dotenv: ['.env']
+
+tasks:
+  prisma:migrate:
+    desc: prisma generate migration
+    cmds:
+      - docker-compose run prisma npx prisma migrate dev --name {{.name}}
+
+  prisma:generate:
+    desc: prisma generate migration
+    cmds:
+      - docker-compose run prisma npx prisma generate
+
+  hasura:init:
+    desc: hasura init
+    cmds:
+      - docker-compose run hasura-cli hasura init /home/app

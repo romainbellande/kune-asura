@@ -1,0 +1,5 @@
+- "!include public_Post.yaml"
+- "!include public_Profile.yaml"
+- "!include public_Tag.yaml"
+- "!include public_User.yaml"
+- "!include public__PostToTag.yaml"

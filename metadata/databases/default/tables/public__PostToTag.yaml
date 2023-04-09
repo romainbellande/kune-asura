@@ -1,0 +1,10 @@
+table:
+  name: _PostToTag
+  schema: public
+object_relationships:
+  - name: Post
+    using:
+      foreign_key_constraint_on: A
+  - name: Tag
+    using:
+      foreign_key_constraint_on: B

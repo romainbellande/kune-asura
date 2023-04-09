@@ -1,0 +1,15 @@
+table:
+  name: Post
+  schema: public
+object_relationships:
+  - name: User
+    using:
+      foreign_key_constraint_on: authorId
+array_relationships:
+  - name: _PostToTags
+    using:
+      foreign_key_constraint_on:
+        column: A
+        table:
+          name: _PostToTag
+          schema: public
